@@ -1,0 +1,44 @@
+2014-07-25 01:17:40,828 CRIT Supervisor running as root (no user in config file)
+2014-07-25 01:17:40,828 WARN Included extra file "/etc/supervisor/conf.d/nginx.conf" during parsing
+2014-07-25 01:17:40,828 WARN Included extra file "/etc/supervisor/conf.d/php5-fpm.conf" during parsing
+2014-07-25 01:17:40,855 INFO RPC interface 'supervisor' initialized
+2014-07-25 01:17:40,856 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-07-25 01:17:40,856 INFO supervisord started with pid 1
+2014-07-25 01:17:41,863 INFO spawned: 'nginx' with pid 10
+2014-07-25 01:17:41,868 INFO spawned: 'php5-fpm' with pid 11
+2014-07-25 01:17:43,134 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 01:17:43,135 INFO success: php5-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 01:48:05,338 WARN received SIGTERM indicating exit request
+2014-07-25 01:48:05,419 INFO waiting for nginx, php5-fpm to die
+2014-07-25 01:48:05,718 INFO stopped: php5-fpm (exit status 0)
+2014-07-25 01:48:05,746 INFO stopped: nginx (exit status 0)
+2014-07-25 01:56:36,222 CRIT Supervisor running as root (no user in config file)
+2014-07-25 01:56:36,241 WARN Included extra file "/etc/supervisor/conf.d/nginx.conf" during parsing
+2014-07-25 01:56:36,241 WARN Included extra file "/etc/supervisor/conf.d/php5-fpm.conf" during parsing
+2014-07-25 01:56:36,432 INFO RPC interface 'supervisor' initialized
+2014-07-25 01:56:36,433 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-07-25 01:56:36,434 INFO supervisord started with pid 1
+2014-07-25 01:56:37,440 INFO spawned: 'nginx' with pid 13
+2014-07-25 01:56:37,446 INFO spawned: 'php5-fpm' with pid 14
+2014-07-25 01:56:38,948 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 01:56:38,949 INFO success: php5-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 02:46:21,745 CRIT Supervisor running as root (no user in config file)
+2014-07-25 02:46:21,781 WARN Included extra file "/etc/supervisor/conf.d/nginx.conf" during parsing
+2014-07-25 02:46:21,781 WARN Included extra file "/etc/supervisor/conf.d/php5-fpm.conf" during parsing
+2014-07-25 02:46:22,229 INFO RPC interface 'supervisor' initialized
+2014-07-25 02:46:22,229 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-07-25 02:46:22,230 INFO supervisord started with pid 1
+2014-07-25 02:46:23,235 INFO spawned: 'nginx' with pid 9
+2014-07-25 02:46:23,238 INFO spawned: 'php5-fpm' with pid 10
+2014-07-25 02:46:25,122 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 02:46:25,122 INFO success: php5-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 05:40:16,320 CRIT Supervisor running as root (no user in config file)
+2014-07-25 05:40:16,362 WARN Included extra file "/etc/supervisor/conf.d/nginx.conf" during parsing
+2014-07-25 05:40:16,363 WARN Included extra file "/etc/supervisor/conf.d/php5-fpm.conf" during parsing
+2014-07-25 05:40:16,518 INFO RPC interface 'supervisor' initialized
+2014-07-25 05:40:16,519 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-07-25 05:40:16,520 INFO supervisord started with pid 1
+2014-07-25 05:40:17,526 INFO spawned: 'nginx' with pid 15
+2014-07-25 05:40:17,538 INFO spawned: 'php5-fpm' with pid 16
+2014-07-25 05:40:18,725 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-25 05:40:18,726 INFO success: php5-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
