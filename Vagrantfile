@@ -62,7 +62,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       package.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
       # init vagrant env with shell
-      package.vm.provision "shell", path: "shell/init.sh"
+      package.vm.provision "shell", privileged: false,  path: "shell/init.sh"
 
       # docker
       package.vm.provision "docker" do |docker|
