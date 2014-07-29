@@ -59,10 +59,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # end
       
       # fix: stdin is not a tty
-      package.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+      #package.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
       # init vagrant env with shell
-      package.vm.provision "shell", privileged: false,  path: "shell/init.sh"
+      #package.vm.provision "shell", privileged: false,  path: "shell/init.sh"
 
       # docker
       package.vm.provision "docker" do |docker|
@@ -72,8 +72,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           # install dev containers
           docker.pull_images "iamfat/mysql"
           docker.pull_images "iamfat/gini-dev"
-          docker.run "iamfat/mysql", args: "--name 'mysql' -v '/dev/log:/dev/log' -v '/vagrant/sync:/data' --privileged -v '/vagrant/sync/config/mysql:/etc/mysql' -v '/vagrant/sync/logs/mysql:/var/log/mysql'"
-          docker.run "iamfat/gini-dev", args: "--name 'gini-dev' -v '/dev/log:/dev/log' -v '/vagrant/sync:/data' --privileged -v '/vagrant/sync/config/sites:/etc/nginx/sites-enabled' -v '/vagrant/sync/logs/supervisor:/var/log/supervisor' -v '/Vagrant/sync/logs/nginx:/var/log/nginx' --link 'mysql:mysql' -p '80:80'"
+          docker.run "iamfat/mysql", args: "--name 'mysql' --privileged -v '/vagrant/sync:/data' -v '/vagrant/sync/config/mysql:/etc/mysql' -v '/vagrant/sync/logs/mysql:/var/log/mysql'"
+          docker.run "iamfat/gini-dev", args: "--name 'gini-dev' --privileged --link 'mysql:mysql' --dns '172.17.42.1' -p '80:80' -v '/vagrant/sync:/data' -v '/vagrant/sync/config/sites:/etc/nginx/sites-enabled' -v '/vagrant/sync/logs/supervisor:/var/log/supervisor' -v '/vagrant/sync/logs/nginx:/var/log/nginx'"
       end
 
   end

@@ -1,16 +1,17 @@
 #!/bin/sh
 
-echo "#############################################"
-echo "#####              NOTE                 #####"
-echo "##### Errors may occur, can be ignored! #####"
-echo "#############################################"
-
+# echo "#############################################"
+# echo "#####              NOTE                 #####"
+# echo "##### Errors may occur, can be ignored! #####"
+# echo "#############################################"
+# 
 # source.list
 echo "\n"
 echo "# Change sources.list to 163.com:"
 sudo cp /vagrant/sources.list/163.com /etc/apt/sources.list
 
 sudo apt-get clean
+sudo apt-get autoremove
 echo "\n"
 echo "# apt-get update:"
 sudo apt-get -y update
@@ -25,6 +26,10 @@ sudo apt-get -y install git
 echo "\n"
 echo "# Install cURL:"
 sudo apt-get -y install curl
+
+echo "\n"
+echo "# Install dnsmasq"
+sudo apt-get -y install dnsmasq
 
 echo "\n"
 echo "# Install NodeJS:"
