@@ -10,8 +10,8 @@ echo "\n"
 echo "# Change sources.list to 163.com:"
 sudo cp /vagrant/sources.list/163.com /etc/apt/sources.list
 
-sudo apt-get clean
-sudo apt-get autoremove
+sudo apt-get -y clean
+sudo apt-get -y autoremove
 echo "\n"
 echo "# apt-get update:"
 sudo apt-get -y update
@@ -33,17 +33,19 @@ sudo apt-get -y install dnsmasq
 
 echo "\n"
 echo "# Install NodeJS:"
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get -y update
 sudo apt-get -y install nodejs
 
 echo "\n"
 echo "# Install VIM 7.4:"
-sudo add-apt-repository ppa:fcwu-tw/ppa
-sudo apt-get update
-sudo apt-get install vim
+sudo add-apt-repository -y ppa:fcwu-tw/ppa
+sudo apt-get -y update
+sudo apt-get -y install vim
 
 echo "\n"
 echo "Install SDCV:"
-sudo apt-get install sdcv
+sudo apt-get -y install sdcv
 git clone https://github.com/pihizi/sdcv-dict.git /home/vagrant/.stardict/dic
 
 echo "\n"
